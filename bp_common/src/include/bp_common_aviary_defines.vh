@@ -89,6 +89,9 @@ typedef struct packed
   integer paddr_width;
   integer asid_width;
 
+  integer boot_pc;
+  integer boot_in_debug;
+
   integer branch_metadata_fwd_width;
   integer btb_tag_width;
   integer btb_idx_width;
@@ -201,6 +204,9 @@ typedef struct packed
   , localparam vaddr_width_p = proc_param_lp.vaddr_width                                           \
   , localparam paddr_width_p = proc_param_lp.paddr_width                                           \
   , localparam asid_width_p  = proc_param_lp.asid_width                                            \
+                                                                                                   \
+  , localparam boot_pc_p       = proc_param_lp.boot_pc                                             \
+  , localparam boot_in_debug_p = proc_param_lp.boot_in_debug                                       \
                                                                                                    \
   , localparam branch_metadata_fwd_width_p = proc_param_lp.branch_metadata_fwd_width               \
   , localparam btb_tag_width_p             = proc_param_lp.btb_tag_width                           \
